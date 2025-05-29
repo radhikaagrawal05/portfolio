@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Full Stack Developer</title>
+    <title>Radhika Agrawal - Full Stack Developer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -13,8 +13,8 @@
         }
 
         :root {
-            --primary-color: #52b5d8;
-            --secondary-color: #8eddfc;
+            --primary-color: #3e8ca9;
+            --secondary-color: #65c3e8;
             --accent-color: #06b6d4;
             --text-primary: #1f2937;
             --text-secondary: #6b7280;
@@ -338,8 +338,8 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
         }
 
         .project-card {
@@ -355,59 +355,74 @@
         }
 
         .project-image {
-            height: 200px;
+            height: 250px;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3rem;
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .project-content {
-            padding: 1.5rem;
+            padding: 2rem;
         }
 
         .project-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
         }
 
         .project-description {
             color: var(--text-secondary);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
 
         .project-tech {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .tech-tag {
             background: var(--bg-secondary);
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
             color: var(--primary-color);
+            font-weight: 500;
         }
 
         .project-links {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .project-links a {
             color: var(--primary-color);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .project-links a:hover {
             color: var(--secondary-color);
+            transform: translateY(-2px);
         }
 
         /* Contact Section */
@@ -596,10 +611,11 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1>Hi, I'm Radhika.</h1>
-                <p class="subtitle">Full Stack Developer & Tech Enthusiast</p>
-                <p> B.Tech student (CGPA 9.56) passionate about technology, problem-solving, and innovation. Skilled in Python, C, C++, Java, full-stack development
- (Flutter, React.js), and SQLite. Exploring cloud computing, green cloud, and machine learning. Seeking impactful projects that drive sustainability and
- energy efficiency.</p>
+                <p class="subtitle">Frontend Developer & Tech Enthusiast</p>
+                <p> B.Tech student passionate about technology, problem-solving, and innovation.  Actively learning machine learning through hands-on
+ projects and online courses, with a strong desire to explore its real-world applications. Currently exploring cloud
+ computing, green cloud, and the intersection of AI with sustainability. Eager to contribute to impactful projects that
+ promote energy efficiency and environmental responsibility.</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">
                         <i class="fas fa-rocket"></i>
@@ -651,7 +667,7 @@
                     </div>
                     <div class="skill">
                         <i class="fab fa-node-js"></i>
-                        <p>Node.js</p>
+                        <p>Flutter</p>
                     </div>
                     <div class="skill">
                         <i class="fab fa-python"></i>
@@ -659,7 +675,7 @@
                     </div>
                     <div class="skill">
                         <i class="fas fa-database"></i>
-                        <p>MongoDB</p>
+                        <p>MySQL</p>
                     </div>
                     <div class="skill">
                         <i class="fab fa-aws"></i>
@@ -673,70 +689,69 @@
     <!-- Projects Section -->
     <section id="projects" class="section projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">Experience (Projects)</h2>
             <div class="projects-grid">
+                <!-- CollegeTips.in Gallery Project -->
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-shopping-cart"></i>
+                        <!-- Replace this placeholder with your actual image -->
+                        <img src="assets/collegetips-gallery.png" alt="CollegeTips.in Gallery" style="object-fit: cover;">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <h3 class="project-title">CollegeTips.in Gallery</h3>
                         <p class="project-description">
-                            Full-stack e-commerce solution with user authentication, payment integration, and admin dashboard.
+                            A dynamic image gallery web application for CollegeTips.in featuring responsive design, 
+                            image optimization, and seamless user experience. Built to showcase educational content 
+                            and resources in an engaging visual format.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Stripe</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive Design</span>
                         </div>
                         <div class="project-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://collegetips.in/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> 
+                                CollegeTips
+                            </a>
+                            <a href="https://github.com/bruhvao/collegetips" target="_blank">
+                                <i class="fab fa-github"></i> 
+                                GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Student Indicator ML Project -->
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
+                        <img src="assets/mlproject.png" alt="CollegeTips.in Gallery" style="object-fit: cover;">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Analytics Dashboard</h3>
+                        <h3 class="project-title">Student Performance Indicator</h3>
                         <p class="project-description">
-                            Real-time data visualization dashboard with interactive charts and responsive design.
+                            Machine Learning project that predicts student academic performance using various indicators 
+                            such as study habits, attendance, and demographic factors. Implements multiple ML algorithms 
+                            to provide accurate predictions and insights for educational planning.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">D3.js</span>
-                            <span class="tech-tag">Express</span>
-                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">Jupyter</span>
                         </div>
                         <div class="project-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Task Management App</h3>
-                        <p class="project-description">
-                            Mobile-first task management application with drag-and-drop functionality and team collaboration.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Redux</span>
-                            <span class="tech-tag">TypeScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/bruhvao/student-performance-indicator" target="_blank">
+                                <i class="fab fa-github"></i> 
+                                GitHub Repository
+                            </a>
+                            <a href="https://student-indicator-demo.herokuapp.com" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> 
+                                Live Demo
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -809,7 +824,7 @@
                 <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a href="https://instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
-            <p>&copy; 2025 Your Name. Built with ❤️ and lots of ☕</p>
+            <p>&copy; 2025 Radhika Agrawal. Built with ❤️ and lots of ☕</p>
         </div>
     </footer>
 
@@ -819,18 +834,15 @@
         const body = document.body;
         const icon = themeToggle.querySelector('i');
 
-        // Check for saved theme preference
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        body.setAttribute('data-theme', savedTheme);
-        icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        // Check for saved theme preference (using in-memory storage instead of localStorage)
+        let currentTheme = 'light';
+        body.setAttribute('data-theme', currentTheme);
+        icon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
 
         themeToggle.addEventListener('click', () => {
-            const currentTheme = body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            body.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', currentTheme);
+            icon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
         });
 
         // Smooth Scrolling
