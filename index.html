@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radhika Agrawal - Full Stack Developer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -828,12 +829,10 @@
     <footer class="footer">
         <div class="container">
             <div class="social-links">
-                <a href="https://github.com/bruhvao" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/radhikaagrawal05" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/radhika-agrawal102005" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
-            <p>&copy; 2025 Radhika Agrawal. Built with ❤️ and lots of ☕</p>
+            <p>&copy; 2025 Radhika Agrawal.</p>
         </div>
     </footer>
 
@@ -878,12 +877,40 @@
             const email = formData.get('email');
             const message = formData.get('message');
             
-            // Here you would typically send the data to your backend
-            // For now, we'll just show an alert
-            alert(`Thanks ${name}! Your message has been received. I'll get back to you soon!`);
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
             
-            // Reset form
-            this.reset();
+            const PUBLIC_KEY = 'XhgrhgdV_-xmKwyzk';
+            const SERVICE_ID = 'service_ft7h7wg';
+            const TEMPLATE_ID = 'template_xkhbg6d';
+            
+            // Initialize EmailJS (only needs to be done once)
+            emailjs.init(PUBLIC_KEY);
+            
+            // Send email
+            emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+                from_name: name,
+                from_email: email,
+                message: message,
+                to_email: 'radhika.05ag@gmail.com',
+                reply_to: email
+            }).then(function(response) {
+                // Success
+                console.log('SUCCESS!', response.status, response.text);
+                alert(`Thanks ${name}! Your message has been sent successfully! I'll get back to you soon.`);
+                document.querySelector('.contact-form').reset();
+            }).catch(function(error) {
+                // Error
+                console.error('FAILED...', error);
+                alert('Sorry, there was an error sending your message. Please try again or contact me directly at radhika.05ag@gmail.com');
+            }).finally(function() {
+                // Reset button state
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
         });
 
         // Navbar scroll effect
